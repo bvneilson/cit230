@@ -9,7 +9,7 @@ body {
 }
 
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
-	
+	max-width: 100%;
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
 }
 
@@ -45,7 +45,7 @@ nav ul li a:hover {
 	background-color: #111;
 }
 
-main {}
+main { display: inline-block; }
 main h2 {}
 main figure { margin: 0 0 .2rem 2%; width:96%; }
 main figure img { width: 100%; }
@@ -55,6 +55,7 @@ section {}
 article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
   width: 96%; /* fill the page in the small/phone view */
   margin: .35rem 2%;
+  float: right;
 }
 
 footer {}
@@ -75,4 +76,26 @@ footer>p {} /* This structure refers to p elements that are direct children of t
 
 .forecast {
 	display: none;
+}
+
+.franklinImg {
+  height: 250px;
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  z-index: 0;
+}
+.overlay {
+  height: 250px;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #D3D3D3;
+  position: absolute;
+  z-index: 100;
+  opacity: .4;
+}
+.overlay:before {
+  content: "Small";
+  margin-left: 50%;
+  font-size: 24px;
 }
